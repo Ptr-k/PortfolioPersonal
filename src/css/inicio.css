@@ -1,0 +1,21 @@
+.inicio {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio #txt {
+    width: 60%;
+    display: inline-block;
+    margin-right: 35%;
+}
+
+.inicio #txt h1 {
+    font-size: 2.60em;
+}
+
+.inicio #img {
+    width: 45%;
+    display: inline-block;
+}

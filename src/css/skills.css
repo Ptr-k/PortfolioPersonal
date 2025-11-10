@@ -1,0 +1,64 @@
+.skills {
+    display: flex;
+    flex-direction: row; /* coloca tarjeta e imagen lado a lado */
+    justify-content: center;
+    align-items: center; /* centra verticalmente entre sí */
+    gap: 24px;
+    flex-wrap: wrap; /* permite saltar a otra línea en pantallas pequeñas */
+}
+
+/* Tarjeta con la tabla de habilidades */
+.skills-card {
+    background-color: var(--surface);
+    width: 45vh;
+    height: 22vh;
+    margin: 0 auto;
+    padding: 16px 24px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.skills-card h2 { margin-top: 0; }
+
+.skills-table {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 8px 10px;
+}
+
+.skills-table .skill-label {
+    text-align: right;
+    white-space: nowrap;
+    padding-right: 10px;
+    vertical-align: middle;
+    font-family: Helvetica, sans-serif;
+}
+
+
+.skills-table .skill-items {
+    text-align: left
+}
+
+
+.skill-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-icon {
+    height: 28px;
+    width: auto;
+}
+
+/* Contenedor de la imagen de la derecha */
+#img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img img {
+    width: clamp(140px, 22vw, 240px);
+    height: auto;
+}

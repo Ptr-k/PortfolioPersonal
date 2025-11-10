@@ -1,0 +1,25 @@
+/* Contenedor de página principal */
+.app .page {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px;
+
+    /*  Lift para que no todo quede tan bajo */
+    --vertical-lift: -15vh;
+}
+
+.app .page > * {
+    transform: translateY(var(--vertical-lift));
+}
+
+/* Fade que se utiliza para la transisión
+ entre páginas*/
+.fade-container {
+    opacity: 1;
+    transition: opacity 300ms ease
+}
+
+.fade-out { opacity: 0; }
+.fade-in { opacity: 1; }

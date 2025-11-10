@@ -1,0 +1,52 @@
+:root {
+    /* Paleta por defecto (tema claro) */
+    --bg: #f6f7fb;          /* Fondo principal */
+    --text: #19151e;        /* Color de texto */
+    --surface: #fde9cc;     /* Superficie de tarjetas/controles */
+    --shadow: rgba(0, 0, 0, 0.12); /* Sombra suave */
+    --link-hover: #7a1f5c;  /* Color de énfasis/hover */
+    overflow: hidden
+}
+
+/* Modo oscuro activado por atributo data-theme en <html> */
+html[data-theme="dark"] {
+    --bg: #19151e;
+    --text: #ffffff;
+    --surface: rgba(41, 32, 49, 0.39);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --link-hover: #ffbaba;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Elementos puntuales */
+#name {
+    font-size: 2em;
+}
+
+/* Efecto hover para TODAS las imágenes excepto las de la sección Contacto */
+img {
+    display: inline-block; /* asegura que el box-shadow y transform se comporten bien */
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    transform-origin: center center;
+}
+
+img:hover {
+    transform: scale(1.06);
+    /* sombra para las imagenes cuando tengan hover */
+    /* box-shadow: 0 12px 24px -10px var(--shadow), 0 6px 12px -8px var(--shadow); */
+    /* también se puede utilizar el de arriba, pero solo hace display de una caja */
+    filter: drop-shadow(0 12px 10px var(--shadow)) drop-shadow(0 6px 6px var(--shadow));
+
+
+}
+
+/* Excepción: desactivar hover en la imagen de la sección Contacto */
+.contacto img { transition: none; }
+.contacto img:hover { transform: none; box-shadow: none; }
