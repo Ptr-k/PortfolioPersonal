@@ -1,12 +1,5 @@
 import '../css/Head.css'
 
-/*
-  Cabecera de la app con navegación y botón para alternar el tema
-  Props:
-  - onNavigate(ruta): función para cambiar de ruta (hash router)
-  - theme: 'dark' | 'light' para mostrar el icono adecuado
-  - onToggleTheme(): alterna entre tema claro/oscuro
-*/
 function Head({ onNavigate, theme = 'dark', onToggleTheme }) {
   // Maneja los clics de los enlaces evitando la navegación por defecto
   const handleClick = (e, target) => {
@@ -23,7 +16,6 @@ function Head({ onNavigate, theme = 'dark', onToggleTheme }) {
               <p><a href="#/habilidades" onClick={(e) => handleClick(e, 'habilidades')}>Habilidades</a></p>
               <p><a href="#/contacto" onClick={(e) => handleClick(e, 'contacto')}>Contacto</a></p>
           </nav>
-          {/* Botón que alterna entre tema claro y oscuro */}
           <button
               className="theme-toggle"
               type="button"
